@@ -1,0 +1,31 @@
+{
+  "name": "solana-agent-mcp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "start": "npm run build && node build/index.js"
+  },
+  "dependencies": {
+    "solana-agent-kit": "2.0.9",
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "@solana-agent-kit/adapter-mcp": "^2.0.7",
+    "@solana-agent-kit/plugin-blinks": "^2.0.5",
+    "@solana-agent-kit/plugin-defi": "^2.0.8",
+    "@solana-agent-kit/plugin-misc": "^2.0.6",
+    "@solana-agent-kit/plugin-token": "^2.0.9",
+    "@solana/web3.js": "^1.98.4",
+    "bs58": "^6.0.0",
+    "dotenv": "^17.4.2",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "typescript": "^5.5.3"
+  },
+  "overrides": {
+    "solana-agent-kit": "$solana-agent-kit"
+  },
+  "private": true
+}
